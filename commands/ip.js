@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(config.color)
     .setThumbnail(config.logo)
     .setFooter({ text: config.footer })
-
+  message.channel.send({ embeds: [ipEmbed] });
 }
 
 module.exports.help = {
