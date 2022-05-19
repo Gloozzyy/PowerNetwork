@@ -14,6 +14,7 @@ module.exports.run = async (client, message, args) => {
     .setThumbnail(config.logo)
     .setFooter({ text: config.footer })
   message.channel.send({ embeds: [ipEmbed] });
+  
 }
 
 module.exports.help = {
