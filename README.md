@@ -1,2 +1,2 @@
-# monkeymanager
+# PowerNetwork
  Discord.js bot
