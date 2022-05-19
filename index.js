@@ -5,31 +5,31 @@ const config = require('./config.json');
 const fs = require('fs');
 
 client.on('guildMemberAdd', async member => {
-    const channellll = member.guild.channels.cache.get('958098231231909948');
+    const channellll = member.guild.channels.cache.get('972915287051620412');
 
     if (!channellll) return;
     const channelwelcomeEmbed = new MessageEmbed()
         .setColor(config.color)
-        .setTitle(`🐒 Welcome 🍌`)
-        .setDescription(`🐵 • ${member.user.tag} joined the server`)
-        .setFooter('Monkey #' + member.guild.memberCount)
+        .setTitle(`Welcome`)
+        .setDescription(`${member.user.tag} joined the server`)
+        .setFooter('#' + member.guild.memberCount)
         .setTimestamp()
     let welc = await channellll.send({ embeds: [channelwelcomeEmbed] }).then(message => {
-        message.react("🐒").catch()
+        message.react("👋").catch()
     });
 });
 client.on('guildMemberRemove', async member => {
-    const channellll = member.guild.channels.cache.get('958098231231909948');
+    const channellll = member.guild.channels.cache.get('972915287051620412');
 
     if (!channellll) return;
 
     const channelleaveEmbed = new MessageEmbed()
         .setColor(config.color)
-        .setTitle('🐒 Goodbbe  🍌').setDescription(`${member.user.tag} left the server`)
-        .setFooter('We now have #' + member.guild.memberCount + " monkeys")
+        .setTitle('Goodbbe').setDescription(`${member.user.tag} left the server`)
+        .setFooter('#' + member.guild.memberCount)
         .setTimestamp()
     channellll.send({ embeds: [channelwelcomeEmbed] }).then(message => {
-        message.react("🐒").catch()
+        message.react("👋").catch()
     });
 })
 
@@ -39,10 +39,10 @@ client.once('ready', () => {
     console.log(`Logged into ${client.user.tag}`);
     client.user.setPresence({
         activities: [{
-            name: `mm!help`,
-            type: "WATCHING"
+            name: `PowerNetwork.minehut.gg`,
+            type: "PLAYING"
         }],
-        status: "dnd"
+        status: "online"
     })
 });
 
@@ -128,6 +128,7 @@ client.on("messageCreate", async message => {
 
 client.login(config.token);
 
+/*
 client.on('interactionCreate', async (interaction) => {
     if (interaction.isButton()) {
         if (interaction.customId === 'nukerhelpbutton') {
@@ -157,3 +158,4 @@ client.on('interactionCreate', async (interaction) => {
         }
     }
 })
+*/
