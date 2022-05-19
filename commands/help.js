@@ -8,11 +8,11 @@ const client = new Client({
 const config = require("../config.json");
 module.exports.run = async (client, message, args) => {
   const helpembed = new MessageEmbed()
-    .setAuthor({ name: "Monkey Manager Help Commands", url: config.logo })
+    .setAuthor({ name: "PowerNetwork Help Commands", url: config.logo })
     .addFields(
-      { name: "Commands", value: "`mm!help commands`" },
-      { name: "Fun", value: "`mm!help fun`" },
-      { name: "Search", value: "`mm!help search`" }
+      { name: "Commands", value: "`>help commands`" },
+      { name: "Fun", value: "`>mm!help fun`" },
+      { name: "Search", value: "`>help search`" }
     )
     .setColor(config.color)
     .setThumbnail(config.logo)
