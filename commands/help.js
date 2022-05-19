@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     .setAuthor({ name: "PowerNetwork Help Commands", url: config.logo })
     .addFields(
       { name: "Commands", value: "`>help commands`" },
-      { name: "Fun", value: "`>mm!help fun`" },
+      { name: "Fun", value: "`>help fun`" },
       { name: "Search", value: "`>help search`" }
     )
     .setColor(config.color)
