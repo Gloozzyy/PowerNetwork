@@ -9,7 +9,7 @@ const config = require("../config.json");
 module.exports.run = async (client, message, args) => {
   const ipEmbed = new MessageEmbed()
     .setAuthor({ name: "PowerNetwork IP", url: config.logo })
-    .setDescription("```PowerNetwork.minehut.gg```");
+    .setDescription({ text: "```PowerNetwork.minehut.gg```" });
     .setColor(config.color)
     .setThumbnail(config.logo)
     .setFooter({ text: config.footer })
