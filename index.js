@@ -127,36 +127,4 @@ client.on("messageCreate", async message => {
     }
 })
 
-client.login(config.token);
-
-/*
-client.on('interactionCreate', async (interaction) => {
-    if (interaction.isButton()) {
-        if (interaction.customId === 'nukerhelpbutton') {
-            interaction.reply({
-                embeds: [
-                    new MessageEmbed()
-                        .setTitle("VMT Nuker")
-                        .setDescription("__Welcome to the help for Nuker__")
-                        .addFields(
-                            { name: "**Commands**", value: "> `v?nuker channelspam <name>`\n> `v?nuker userspam <@user>`\n> `v?nuker chaos`\n> `v?nuker nukemessages`" }
-                        )
-                        .setFooter("VMT Created by ViiPer LLC")
-                ]
-            })
-        } else if (interaction.customId === 'serverhelpbutton') {
-            interaction.reply({
-                embeds: [
-                    new MessageEmbed()
-                        .setTitle("VMT Servers")
-                        .setDescription("__Welcome to the VMT affiliates__")
-                        .addFields(
-                            { name: "**Servers**", value: "> **03Gens** - [Click Here](https://discord.gg/nahBvG6EbC)\n> **ViiPer** - [Click Here](https://discord.gg/X4VxE5JEYB)" }
-                        )
-                        .setFooter("VMT Created by ViiPer LLC")
-                ]
-            })
-        }
-    }
-})
-*/
+client.login(process.env.DISCORD_TOKEN);
