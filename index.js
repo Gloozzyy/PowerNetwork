@@ -3,6 +3,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const client = new Client({ intents: [ Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS ] });
 const config = require('./config.json');
 const fs = require('fs');
+require('dotenv').config();
 
 client.on('guildMemberAdd', async member => {
     const channellll = member.guild.channels.cache.get('972915287051620412');
